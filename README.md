@@ -2,9 +2,9 @@
 
 # Introduction
 
-The python script which is attached here is a simple script (without any function or classes) to orchestrate the NGFWv using the CSP2100 and Firepower Management Center(FMC) APIs and using the NGFWv Day0 configuration file
+The python script which is attached here is a simple script (without any function or classes) to orchestrate the NGFWv using the CSP2100 and Firepower Management Center(FMC) APIs and using the NGFWv Day0 configuration file.
 
-The Firepower management center sections of this script is generated using the API explorer with little modification and this is the advantage of the API explorer in FMC. It enables the administrator with little programming knowladge to write scripts using this feature. 
+Please note: Some of the code which I used here can be modified with the best options and some of the sections of this code can be functionalized. But that is not the intention of this script. This is to show you how useful the api explorer on providing the details for each supported features with example and how easy to generate the required scripts from the api explorer itslef. 
 
 The Cisco Firepower® NGFW (next-generation firewall) is the industry’s first fully integrated, threat-focused next-gen firewall with unified management. It uniquely provides advanced threat protection before, during, and after attacks
 
