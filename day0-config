@@ -1,0 +1,20 @@
+{
+"EULA": "accept",
+"Hostname": "ftdv-01",
+"AdminPassword": "Cisco123",
+"FirewallMode": "routed",
+"DNS1": "171.70.168.183",
+"DNS2": "1.1.1.2",
+"DNS3": "",
+"IPv4Mode": "manual",
+"IPv4Addr": "10.2.0.112",
+"IPv4Mask": "255.255.255.0",
+"IPv4Gw": "10.2.0.1",
+"IPv6Mode": "disabled",
+"IPv6Addr": "",
+"IPv6Mask": "",
+"IPv6Gw": "",
+"FmcIp": "10.0.13.102",
+"FmcRegKey": "Cisco123",
+"FmcNatId": ""
+}
