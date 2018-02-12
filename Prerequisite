@@ -1,14 +1,9 @@
-# Prerequisite
+Prerequisite
 
 Below is the topology used for this demo, 
 
 
-
-
-
 The demo is to auto provision the NGFWv on CSP2100 between the client and server. This can be tested by doing a continuous ping from client to the web server. Initially (before inserting the NGFWv) the client will not ping the web server, because there is no connectivity between the client and web server. Once this script is executed, it will auto provision the NGFWv on CSP2100, register it in FMC and configure the required interfaces IP addresses and configure the ACL. 
-
-
 
 
 Before you start 
