@@ -22,6 +22,8 @@ Cisco Cloud Services Platform 2100 is purpose built platform to quickly and easi
 
 you can quickly deploy any Cisco or third-party network virtual service through a simple, built-in, native web user interface (WebUI), command-line interface (CLI), or representational state transfer (REST) API.
 
+Please read the Perquisite for required hardware, software and other items to run this demo sucessfully. Also attached the demo video on this. 
+
 
 
 
