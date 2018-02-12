@@ -1,0 +1,66 @@
+# Prerequisite
+
+Below is the topology used for this demo, 
+
+
+
+
+
+The demo is to auto provision the NGFWv on CSP2100 between the client and server. This can be tested by doing a continuous ping from client to the web server. Initially (before inserting the NGFWv) the client will not ping the web server, because there is no connectivity between the client and web server. Once this script is executed, it will auto provision the NGFWv on CSP2100, register it in FMC and configure the required interfaces IP addresses and configure the ACL. 
+
+
+
+
+Before you start 
+
+The following things are required to run this script for auto provisioning of NGFWv,
+
+1)	 Create the day0 ISO file using the below steps and upload it in the CSP2100 repository (you can automate it, but this script not covered it using) 
+
+Generate the virtual CD-ROM by converting the text file to an ISO file:
+/usr/bin/genisoimage -r -o day0.iso day0-config
+
+or
+/usr/bin/mkisofs -r -o day0.iso day0-config
+
+Note: Repeat the above steps to create unique default configuration files for each Firepower Threat Defense Virtual you want to deploy.
+
+2)	Upload the NGFWv (FTDv) qcow2 image to CSP2100. 
+
+3)	In the script, change the following parameters/setings based on your setup,
+
+Under the section “# Provisioning the NGFWv with Day0 Configuration on CSP2100
+a.	Server = <CSP2100 IP address>
+b.	Password =  “CSP2100 admin password”
+c.	“name”:“FTDv”
+d.	“IP”:”<IP_address>”
+e.	“iso_name”:”<image_name>”
+f.	“vnics”:”<interface_configuration>’
+g.	if os.system("ping -n <ip_address>") == 0:
+
+Under the section # Registering the NGFWv with default policy in Firepower Management Center (FMC)#
+
+a.	<domain id> in the api_path
+b.	server = https://<FMC_ipaddress>
+c.	password = "<password>"
+d.	post_data 
+•	“name”:  ”<ip_address_of_FTD>”
+•	“hostname”: ”<Ip_address_of_FTD>”
+•	“regKey”: “cisco123”
+•	“version”: “<FTD_version>”
+
+ Under the section #Configuring the Interfaces with IP addresses and bring up the interfaces#
+
+a.	<domain id> in the api_path
+b.	Server = https://<FMC_ipaddress>
+c.	Password =  “FMC admin password”
+d.	Under put_data (on required interfaces based on your setup)
+•	“address": "<interface_ip_address>
+•	“netmask”: “<netmask>”
+•	“ifname”:”<inf_name>”
+
+Under #Additional Rule in the default policy to allow the HTTP traffic from Client to Web Server
+
+a.	< domain id> in the api_path
+b.	Server = https://<FMC_ipaddress>
+c.	Password =  “FMC admin password”
