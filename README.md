@@ -2,7 +2,7 @@
 
 # Introduction
 
-This python script which is attached here is a simple script (without any function or classes) to orchestrate the NGFWv using the CSP2100 and Firepower Management Center(FMC) APIs and using the NGFWv Day0 configuration file
+The python script which is attached here is a simple script (without any function or classes) to orchestrate the NGFWv using the CSP2100 and Firepower Management Center(FMC) APIs and using the NGFWv Day0 configuration file
 
 The Firepower management center sections of this script is generated using the API explorer with little modification and this is the advantage of the API explorer in FMC. It enables the administrator with little programming knowladge to write scripts using this feature. 
 
