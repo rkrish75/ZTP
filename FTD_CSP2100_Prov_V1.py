@@ -100,7 +100,7 @@ finally:
 import time
 print ('\n' * 2)
 print ("Waiting for FTDv to Boot up")
-time.sleep(10)
+time.sleep(1070)
 
 
 import os
